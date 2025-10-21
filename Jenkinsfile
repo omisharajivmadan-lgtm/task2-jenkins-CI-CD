@@ -2,12 +2,7 @@
 pipeline {
     // Defines the Docker image to use for all stages.
     // This is the "agent" that executes our commands, showing an advanced setup.
-    agent {
-    docker { 
-        image 'docker:latest' // Use the image that CONTAINS the Docker CLI
-        args '-v /var/run/docker.sock:/var/run/docker.sock' 
-    }
-}
+    agent any
     
     // Environment variables for organization and traceability
     environment {

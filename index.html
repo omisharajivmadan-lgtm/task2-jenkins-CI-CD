@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DevOps CI/CD Success! - Task 2</title>
+    <meta charset="UTF-8">
+    <style>
+        /* Basic Reset and Font */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9; /* Light, clean background */
+            color: #333;
+            text-align: center;
+        }
+
+        /* Container for the main content */
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 40px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header Styling */
+        h1 {
+            color: #4CAF50; /* A clean green for success */
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 15px;
+        }
+
+        /* Highlight for the key message */
+        .success-message {
+            color: #3f51b5; /* A strong blue for emphasis */
+            font-size: 1.2em;
+            margin: 30px 0;
+            font-weight: 600;
+        }
+
+        /* Detail/Version display */
+        .details {
+            background-color: #e0f7fa; /* Light blue background for details */
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border-left: 5px solid #00bcd4;
+        }
+
+        /* Strong text inside details */
+        .details strong {
+            color: #00838f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>&#x1F680; DevOps Pipeline Success! &#x1F3C6;</h1>
+        <p class="success-message">
+            This application was built, tested, and deployed **AUTOMATICALLY** using our Jenkins CI/CD Pipeline.
+        </p>
+        <div class="details">
+            <p><strong>Project:</strong> Task 2 - Simple Jenkins Pipeline</p>
+            <p><strong>Deployment Timestamp:</strong> <span id="timestamp">Loading...</span></p>
+        </div>
+    </div>
+    <script>
+        // JavaScript to show the actual time of deployment
+        document.getElementById('timestamp').innerText = new Date().toLocaleString();
+    </script>
+</body>
+</html>

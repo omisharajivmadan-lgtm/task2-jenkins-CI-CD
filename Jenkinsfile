@@ -3,11 +3,11 @@ pipeline {
     // Defines the Docker image to use for all stages.
     // This is the "agent" that executes our commands, showing an advanced setup.
     agent {
-        docker { 
-            image 'docker:dind' // 'dind' image is often used, but here we'll use a standard shell environment that can execute Docker
-            args '-v /var/run/docker.sock:/var/run/docker.sock' // Ensures the agent can talk to the host's Docker daemon (DooD)
-        }
+    docker { 
+        image 'docker:latest' // Use the image that CONTAINS the Docker CLI
+        args '-v /var/run/docker.sock:/var/run/docker.sock' 
     }
+}
     
     // Environment variables for organization and traceability
     environment {
